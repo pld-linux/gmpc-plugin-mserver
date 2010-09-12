@@ -1,23 +1,20 @@
-# TODO:
-# - desc
-
 %define		source_name gmpc-mserver
 Summary:	Mserver plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka mserver dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-mserver
-Version:	0.19.0
-Release:	2
+Version:	0.20.0
+Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://dl.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
-# Source0-md5:	5d4a3e703eb9ec9a4132039101f57618
+Source0:	http://downloads.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
+# Source0-md5:	850de96a29e68df646110894b95cf188
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_MSERVER
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glib2-devel >= 2.4
 BuildRequires:	gmpc-devel >= 0.19.0
 BuildRequires:	gtk+2-devel >= 2:2.4
-BuildRequires:	intltool
+BuildRequires:	intltool >= 0.21
 BuildRequires:	libmicrohttpd-devel
 BuildRequires:	libmpd-devel >= 0.19.0
 BuildRequires:	libtool
@@ -27,8 +24,8 @@ BuildRequires:	taglib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This Plugin lets you stream music files to your mpd that are not in your
-database.
+This Plugin lets you stream music files to your mpd that are not in
+your database.
 
 %prep
 %setup -qn %{source_name}-%{version}
