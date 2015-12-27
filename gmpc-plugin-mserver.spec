@@ -3,11 +3,12 @@ Summary:	Mserver plugin for Gnome Music Player Client
 Summary(pl.UTF-8):	Wtyczka mserver dla odtwarzacza Gnome Music Player Client
 Name:		gmpc-plugin-mserver
 Version:	0.20.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://downloads.sourceforge.net/musicpd/%{source_name}-%{version}.tar.gz
 # Source0-md5:	850de96a29e68df646110894b95cf188
+Patch0:		mpd-strndup.patch
 URL:		http://gmpc.wikia.com/wiki/GMPC_PLUGIN_MSERVER
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,6 +31,7 @@ your database.
 
 %prep
 %setup -qn %{source_name}-%{version}
+%patch0 -p1
 
 %build
 %{__libtoolize}

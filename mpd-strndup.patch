@@ -1,0 +1,11 @@
+--- gmpc-mserver-0.20.0/src/plugin.c.orig	2010-03-22 04:32:28.000000000 +0100
++++ gmpc-mserver-0.20.0/src/plugin.c	2015-12-27 13:58:35.636358629 +0100
+@@ -17,6 +17,8 @@
+  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+ 
++#define HAVE_STRNDUP 1
++
+ #include <stdio.h>
+ #include <string.h>
+ #include <config.h>
